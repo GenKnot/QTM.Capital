@@ -39,7 +39,7 @@ const ProjectsArea = () => {
                     <p className="mb-0">帮助中小企业完成"蚂蚁变大象"的孵化过程</p>
                   </div>
 
-                  <a href="/#quantum-capital" className="btn">
+                  <a href="/#quantum-services" className="btn">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none">
@@ -71,7 +71,7 @@ const ProjectsArea = () => {
                     <p className="mb-0">为中小企业提供专业的融资解决方案</p>
                   </div>
 
-                  <a href="/#quantum-capital" className="btn">
+                  <a href="/#quantum-services" className="btn">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none">
@@ -103,7 +103,7 @@ const ProjectsArea = () => {
                     <p className="mb-0">帮助企业在资本市场获得更高的溢价空间</p>
                   </div>
 
-                  <a href="/#quantum-capital" className="btn">
+                  <a href="/#quantum-services" className="btn">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none">
@@ -135,7 +135,7 @@ const ProjectsArea = () => {
                     <p className="mb-0">专注于智能产业的"高信念"投资</p>
                   </div>
 
-                  <a href="/#quantum-capital" className="btn">
+                  <a href="/#quantum-services" className="btn">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none">

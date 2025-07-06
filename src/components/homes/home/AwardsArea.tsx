@@ -4,7 +4,7 @@ import React from 'react';
 const AwardsArea = () => {
   return (
     <>
-      <div className="awards-honors-wrapper" id="quantum-capital">
+      <div className="awards-honors-wrapper" id="quantum-services">
         <div className="divider"></div>
 
         <div className="container">

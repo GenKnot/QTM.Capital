@@ -13,7 +13,7 @@ const WorkprocessArea = () => {
               <div className="section-heading">
                 <h2 className="mb-4">我们的价值观</h2>
                 <p className="mb-5">我们是一群来自全球各地的投资人、基金管理人、企业家、经济学者、管理学家、品牌营销专家，联合打造了量子资本和量子咨询，每个人都在各自擅长的领域参与到中小企业的成长过程中。</p>
-                <a href="#quantum-capital" className="btn btn-primary"><span>下一步</span><span>下一步</span></a>
+                <a href="#quantum-services" className="btn btn-primary"><span>下一步</span><span>量子资本</span></a>
               </div>
             </div>
 

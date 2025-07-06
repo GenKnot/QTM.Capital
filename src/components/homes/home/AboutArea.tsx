@@ -49,7 +49,7 @@ const AboutArea = () => {
                 </ul>
 
                 <div>
-                  <a href="#quantum-capital" className="btn btn-primary mt-1"><span>下一步</span><span>下一步</span></a>
+                  <a href="#quantum-capital" className="btn btn-primary mt-1"><span>下一步</span><span>量子资本</span></a>
                 </div>
               </div>
             </div>

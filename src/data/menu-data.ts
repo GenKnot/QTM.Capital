@@ -34,7 +34,7 @@ const menu_data: MenuItem[] = [
   {
     id: 3,
     title: "量子资本",
-    link: "/#quantum-capital",
+    link: "/#quantum-services",
     has_dropdown: false,
   },
   {
