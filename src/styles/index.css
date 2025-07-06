@@ -1,0 +1,307 @@
+
+
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com"); 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap");
+ 
+@import "swiper/css/bundle";   
+@import "bootstrap/dist/css/bootstrap.css"; 
+
+@import url("../../public/assets/css/animate.css");
+@import url("../../public/assets/css/bootstrap.min.css");
+@import url("../../public/assets/css/style.css");
+
+.brand-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ECC80B;
+  text-decoration: none;
+  font-family: 'Unbounded', sans-serif;
+  text-shadow: 0 0 10px rgba(236, 200, 11, 0.3);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand .brand-text {
+  color: #ECC80B;
+}
+
+.navbar-brand .brand-text:hover {
+  color: #FFD700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.dark-mode .navbar-brand .brand-text {
+  color: #ECC80B;
+}
+
+.dark-mode {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.dark-mode .header-area {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(236, 200, 11, 0.2);
+}
+
+.dark-mode .navbar-nav .nav-link {
+  color: #f8f9fa !important;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+  color: #ECC80B !important;
+  text-shadow: 0 0 8px rgba(236, 200, 11, 0.4);
+}
+
+.dark-mode .theme-btn {
+  background: transparent;
+  border: none;
+  color: #ECC80B;
+}
+
+.dark-mode .theme-btn:hover {
+  background: transparent;
+  color: #FFD700;
+}
+
+.dark-mode .btn-primary:not(.theme-btn) {
+  background: linear-gradient(45deg, #ECC80B, #FFD700);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(236, 200, 11, 0.3);
+  transition: all 0.3s ease;
+}
+
+.dark-mode .btn-primary:not(.theme-btn):hover {
+  background: linear-gradient(45deg, #FFD700, #ECC80B);
+  box-shadow: 0 6px 20px rgba(236, 200, 11, 0.5);
+  transform: translateY(-2px);
+  color: #000;
+}
+
+.dark-mode .card,
+.dark-mode .bg-secondary {
+  background: rgba(20, 20, 20, 0.9) !important;
+  border: 1px solid rgba(236, 200, 11, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+  color: #f8f9fa;
+}
+
+.dark-mode p {
+  color: #e9ecef;
+}
+
+.dark-mode .text-primary {
+  color: #ECC80B !important;
+}
+
+.dark-mode .border,
+.dark-mode .border-top,
+.dark-mode .border-bottom {
+  border-color: rgba(236, 200, 11, 0.3) !important;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.team-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ECC80B, #FFD700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 2rem;
+  box-shadow: 0 4px 15px rgba(236, 200, 11, 0.3);
+}
+
+.team-info h4 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.team-info p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.stats-wrapper {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 4rem 0;
+}
+
+.stat-card {
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ECC80B;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid #ECC80B;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card.featured {
+  background: linear-gradient(135deg, #ECC80B, #FFD700);
+  color: #000;
+  border-left: 4px solid #000;
+}
+
+.testimonial-card.featured blockquote p {
+  color: #000;
+  font-weight: 500;
+}
+
+.testimonial-card.featured blockquote cite {
+  color: #333;
+  font-weight: 600;
+}
+
+.quote-icon {
+  text-align: center;
+  color: #ECC80B;
+  font-size: 2rem;
+}
+
+.testimonial-card.featured .quote-icon {
+  color: #000;
+}
+
+.testimonial-card blockquote {
+  margin: 0;
+}
+
+.testimonial-card blockquote p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.testimonial-card blockquote footer {
+  margin-top: 1rem;
+}
+
+.testimonial-card blockquote cite {
+  font-weight: 600;
+  color: #ECC80B;
+  font-style: normal;
+}
+
+.cta-wrapper {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 4rem 0;
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+}
+
+.cta-buttons .btn {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 深色模式适配 */
+.dark-mode .team-card {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(236, 200, 11, 0.2);
+}
+
+.dark-mode .team-info h4 {
+  color: #f8f9fa;
+}
+
+.dark-mode .team-info p {
+  color: #e9ecef;
+}
+
+.dark-mode .stats-wrapper {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.dark-mode .stat-card {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(236, 200, 11, 0.2);
+}
+
+.dark-mode .stat-label {
+  color: #e9ecef;
+}
+
+.dark-mode .testimonial-card {
+  background: rgba(20, 20, 20, 0.9);
+  border-left: 4px solid #ECC80B;
+}
+
+.dark-mode .testimonial-card blockquote p {
+  color: #e9ecef;
+}
+
+.dark-mode .cta-wrapper {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}

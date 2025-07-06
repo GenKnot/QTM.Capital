@@ -1,0 +1,37 @@
+
+const menu_data = [
+  {
+    id: 1,
+    title: "首页",
+    link: "/",
+    has_dropdown: false,
+  },
+  {
+    id: 2,
+    title: "量子咨询",
+    link: "/quantum-consulting",
+    has_dropdown: false,
+  },
+  {
+    id: 3,
+    title: "量子资本",
+    link: "/#quantum-capital",
+    has_dropdown: false,
+  },
+  {
+    id: 4,
+    title: "产业并购",
+    link: "/industrial-mergers",
+    has_dropdown: false,
+  },
+  {
+    id: 5,
+    title: "量子合伙人",
+    link: "/quantum-partners",
+    has_dropdown: false,
+  },
+
+
+]
+
+export default menu_data
