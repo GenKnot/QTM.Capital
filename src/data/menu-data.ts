@@ -1,5 +1,24 @@
+interface MenuItem {
+  id: number;
+  title: string;
+  link: string;
+  has_dropdown: boolean;
+  sub_menus?: SubMenuItem[];
+}
 
-const menu_data = [
+interface SubMenuItem {
+  title: string;
+  link: string;
+  has_inner_dropdown?: boolean;
+  inner_submenu?: InnerSubMenuItem[];
+}
+
+interface InnerSubMenuItem {
+  title: string;
+  link: string;
+}
+
+const menu_data: MenuItem[] = [
   {
     id: 1,
     title: "首页",
@@ -30,8 +49,6 @@ const menu_data = [
     link: "/quantum-partners",
     has_dropdown: false,
   },
-
-
 ]
 
 export default menu_data

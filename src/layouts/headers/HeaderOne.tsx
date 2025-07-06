@@ -87,7 +87,7 @@ const HeaderOne = ({style_2} :any) => {
                     onMouseEnter={() =>  setNavTitle(item.title)}
                      
                     onClick={() => openMobileMenu(item.title)}>{item.title}</Link>
-                    {item.has_dropdown &&
+                    {item.has_dropdown && item.sub_menus &&
                       <ul className="vorix-dd-menu" style={{ display: navTitle === item.title ? 'block' : 'none' }}>
                         {item.sub_menus.map((sub_menu, index) => (
                           <li key={index} className="vorix-dd">
@@ -96,9 +96,9 @@ const HeaderOne = ({style_2} :any) => {
                             onMouseEnter={() =>  setNavTitle2(sub_menu.title)}
                             >{sub_menu.title}</Link>
 
-                            {'has_inner_dropdown' in sub_menu && sub_menu.has_inner_dropdown &&
+                            {sub_menu.has_inner_dropdown && sub_menu.inner_submenu &&
                               <ul className="vorix-dd-menu" style={{ display: navTitle2 === sub_menu.title ? 'block' : 'none' }}>
-                                {sub_menu?.inner_submenu?.map((inner_menu, inner_index) => (
+                                {sub_menu.inner_submenu.map((inner_menu, inner_index) => (
                                   <li key={inner_index}>
                                     <Link href={inner_menu.link}>{inner_menu.title}</Link>
                                   </li>
