@@ -8,7 +8,7 @@ const QuantumConsultingArea = () => {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="quantum-consulting-content">
-                <h1 className="section-title">量子咨询</h1>
+                <h1 className="section-title">Xpend咨询</h1>
                 <p className="section-subtitle">
                   让每分钱都带来增长
                 </p>
@@ -19,7 +19,7 @@ const QuantumConsultingArea = () => {
             </div>
             <div className="col-lg-6">
               <div className="quantum-consulting-img">
-                <img src="/Image/service1.jpg" alt="量子咨询" />
+                <img src="/Image/service1.jpg" alt="Xpend咨询" />
               </div>
             </div>
           </div>

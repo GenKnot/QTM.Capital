@@ -52,7 +52,7 @@ const TestimonialArea = () => {
                         </svg>
                         <div>
                           <h4>Max Oneal</h4>
-                          <p className="mb-0">量子资本创始合伙人</p>
+                          <p className="mb-0">Xpend资本创始合伙人</p>
                         </div>
                       </div>
                     </SwiperSlide>
@@ -67,7 +67,7 @@ const TestimonialArea = () => {
                         </svg>
                         <div>
                           <h4>Frank Yang</h4>
-                          <p className="mb-0">量子资本创始合伙人</p>
+                          <p className="mb-0">Xpend资本创始合伙人</p>
                         </div>
                       </div>
                     </SwiperSlide>
@@ -82,7 +82,7 @@ const TestimonialArea = () => {
                         </svg>
                         <div>
                           <h4>Yu Wang</h4>
-                          <p className="mb-0">量子资本合伙人</p>
+                          <p className="mb-0">Xpend资本合伙人</p>
                         </div>
                       </div>
                     </SwiperSlide>

@@ -27,14 +27,14 @@ const menu_data: MenuItem[] = [
   },
   {
     id: 2,
-    title: "量子咨询",
+    title: "Xpend咨询",
     link: "/quantum-consulting",
     has_dropdown: false,
   },
   {
     id: 3,
-    title: "量子资本",
-    link: "/#quantum-services",
+    title: "Xpend资本",
+    link: "/xpend-capital",
     has_dropdown: false,
   },
   {
@@ -45,7 +45,7 @@ const menu_data: MenuItem[] = [
   },
   {
     id: 5,
-    title: "量子合伙人",
+    title: "Xpend合伙人",
     link: "/quantum-partners",
     has_dropdown: false,
   },

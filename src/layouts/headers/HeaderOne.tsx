@@ -68,8 +68,9 @@ const HeaderOne = ({style_2} :any) => {
         <nav className="navbar navbar-expand-lg">
           <div className="container">
 
-            <Link className="navbar-brand" href="/">
-              <span className="brand-text">QTM</span>
+          <Link className="navbar-brand" href="/">
+              <img className="dark-logo navbar-logo" src="/logo-main.png" alt="" style={{ maxWidth: '150px', maxHeight: '40px', width: 'auto', height: 'auto', objectFit: 'contain' }} />
+              <img className="light-logo navbar-logo" src="/logo-main.png" alt="" style={{ maxWidth: '150px', maxHeight: '40px', width: 'auto', height: 'auto', objectFit: 'contain' }} />
             </Link>
 
 

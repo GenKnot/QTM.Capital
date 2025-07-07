@@ -4,8 +4,8 @@ import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
 export const metadata = {
-	title: "404 错误 || 量子资本 - 专业的企业咨询服务",
-	description: "量子资本 - 专业的企业咨询服务", 
+	title: "404 错误 || Xpend资本 - 专业的企业咨询服务",
+	description: "Xpend资本 - 专业的企业咨询服务", 
 };
 
 

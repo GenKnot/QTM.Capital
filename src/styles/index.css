@@ -114,6 +114,9 @@
   transition: all 0.3s ease;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 480px; 
+  display: flex;
+  flex-direction: column;
 }
 
 .team-card:hover {
@@ -126,6 +129,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+  flex-shrink: 0; 
 }
 
 .avatar-placeholder {
@@ -141,10 +145,18 @@
   box-shadow: 0 4px 15px rgba(236, 200, 11, 0.3);
 }
 
+.team-info {
+  flex: 1; /* 占据剩余空间 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .team-info h4 {
   color: #333;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  flex-shrink: 0; /* 防止压缩 */
 }
 
 .team-info p {
@@ -266,10 +278,12 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* 深色模式适配 */
 .dark-mode .team-card {
   background: rgba(20, 20, 20, 0.9);
   border: 1px solid rgba(236, 200, 11, 0.2);
+  height: 480px; 
+  display: flex;
+  flex-direction: column;
 }
 
 .dark-mode .team-info h4 {
@@ -303,5 +317,278 @@
 }
 
 .dark-mode .cta-wrapper {
-  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.value-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid #ECC80B;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ECC80B, #FFD700);
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-left-color: #FFD700;
+}
+
+.value-item h5 {
+  font-weight: 600;
+  position: relative;
+}
+
+.value-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* 故事内容样式 */
+.story-content p {
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark-mode .value-item {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(236, 200, 11, 0.2);
+  border-left: 4px solid #ECC80B;
+  backdrop-filter: blur(10px);
+}
+
+.dark-mode .value-item:hover {
+  border-left-color: #FFD700;
+  box-shadow: 0 10px 30px rgba(236, 200, 11, 0.2);
+}
+
+.dark-mode .value-item h5 {
+  color: #f8f9fa;
+}
+
+.dark-mode .value-item p {
+  color: #e9ecef;
+}
+
+.dark-mode .story-content p {
+  color: #e9ecef;
+}
+
+.hero-content .hero-subtitle.text-center {
+  margin-left: 0 !important;
+  text-align: center !important;
+}
+
+@media only screen and (min-width:768px) {
+  .hero-content .hero-subtitle.text-center {
+    margin-left: 0 !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-logo {
+    max-width: 100px !important;
+    max-height: 27px !important;
+  }
+}
+
+.xpend-capital-wrapper {
+  padding: 4rem 0;
+}
+
+.mission-statement {
+  background: linear-gradient(135deg, rgba(236, 200, 11, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid rgba(236, 200, 11, 0.3);
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-statement::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(236, 200, 11, 0.05) 50%, transparent 70%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.mission-statement h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ECC80B;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-container {
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(236, 200, 11, 0.3);
+}
+
+.service-name-description {
+  flex: 1;
+}
+
+.service-name-description h3 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.service-name-description p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.service-number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ECC80B, #FFD700);
+  border-radius: 50%;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(236, 200, 11, 0.3);
+}
+
+/* 深色模式样式 */
+.dark-mode .xpend-capital-wrapper {
+  background: rgba(10, 10, 10, 0.5);
+}
+
+.dark-mode .mission-statement {
+  background: linear-gradient(135deg, rgba(236, 200, 11, 0.05) 0%, rgba(255, 215, 0, 0.05) 100%);
+  border-color: rgba(236, 200, 11, 0.2);
+}
+
+.dark-mode .mission-statement h3 {
+  color: #ECC80B;
+}
+
+.dark-mode .service-card {
+  background: rgba(20, 20, 20, 0.9);
+  border-color: rgba(236, 200, 11, 0.2);
+}
+
+.dark-mode .service-name-description h3 {
+  color: #f8f9fa;
+}
+
+.dark-mode .service-name-description p {
+  color: #e9ecef;
+}
+
+.dark-mode .service-number {
+  background: linear-gradient(135deg, #ECC80B, #FFD700);
+  color: #000;
+}
+
+.service-action {
+  margin-top: 1.5rem;
+}
+
+.service-action .btn {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #ECC80B, #FFD700);
+  border: none;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-action .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 200, 11, 0.4);
+  background: linear-gradient(45deg, #FFD700, #ECC80B);
+  color: #000;
+  text-decoration: none;
+}
+
+.service-action .btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.service-action .btn span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-action .btn:hover span:first-child {
+  opacity: 0;
+}
+
+.service-action .btn:hover span:last-child {
+  opacity: 1;
+}
+
+.dark-mode .service-action .btn {
+  background: linear-gradient(45deg, #ECC80B, #FFD700);
+  color: #000;
+}
+
+.dark-mode .service-action .btn:hover {
+  background: linear-gradient(45deg, #FFD700, #ECC80B);
+  box-shadow: 0 6px 20px rgba(236, 200, 11, 0.5);
 }

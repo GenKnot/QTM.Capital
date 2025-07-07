@@ -61,7 +61,7 @@ const ServiceArea = () => {
           <div className="row g-4 align-items-end">
             <div className="col-12 col-sm-6">
               <div className="section-heading">
-                <h2 className="mb-0">量子咨询核心服务</h2>
+                <h2 className="mb-0">Xpend咨询核心服务</h2>
               </div>
             </div>
 

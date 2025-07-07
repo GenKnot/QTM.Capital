@@ -8,7 +8,7 @@ const QuantumConsulting = () => {
     <>
       <HeaderOne />
       <main>
-        <Breadcrumb title="量子咨询" subtitle="专业的企业咨询服务" />
+        <Breadcrumb title="Xpend咨询" subtitle="专业的企业咨询服务" />
         <QuantumConsultingArea />
       </main>
       <FooterOne />

@@ -59,7 +59,7 @@ const OffCanvas = ({openCanvas, setOpenCavas} : any) => {
 
               <div>
                 <p>Email address</p>
-                <h5 className="mb-0">Info@qtmcap.com</h5>
+                <h5 className="mb-0">info@xpendcap.com</h5>
               </div>
             </div>
 

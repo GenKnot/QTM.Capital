@@ -11,7 +11,7 @@ const ProjectsArea = () => {
           <div className="row g-4 align-items-end justify-content-between">
             <div className="col-12 col-md-8 col-lg-8">
               <div className="section-heading">
-                <h2 className="mb-0">量子资本</h2>
+                <h2 className="mb-0">Xpend资本</h2>
               </div>
               <p className="mb-0">让每个中小型企业都有获得资本加持的权利</p>
             </div>

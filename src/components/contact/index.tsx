@@ -11,7 +11,6 @@ const Contact = () => {
 			<HeaderOne />
 			<Breacrumb title="联系我们" subtitle="联系我们" />
 			<ContactArea />
-			<Cta2Area />
 			<FooterOne />
 		</>
 	);
