@@ -1,7 +1,74 @@
 "use client"
-import React from 'react';
+
+import React, { useState } from 'react';
 
 const ContactArea = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setSubmitStatus('success');
+        setSubmitMessage('消息发送成功！我们会尽快回复您。');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        setSubmitMessage('发送失败，请稍后重试。');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setSubmitMessage('发送失败，请检查网络连接后重试。');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <div className="contact-details-wrap">
@@ -18,34 +85,90 @@ const ContactArea = () => {
 
                   <div className="divider-sm"></div>
 
-                  <form onClick={(e) => e.preventDefault()}>
+                  {submitStatus === 'success' && (
+                    <div className="alert alert-success text-center mb-4">
+                      {submitMessage}
+                    </div>
+                  )}
+                  {submitStatus === 'error' && (
+                    <div className="alert alert-danger text-center mb-4">
+                      {submitMessage}
+                    </div>
+                  )}
+
+                  <form onSubmit={handleSubmit}>
                     <div className="row g-4 g-xl-5">
                       <div className="col-12 col-lg-6">
-                        <input type="text" className="form-control" placeholder="您的姓名" />
+                        <input 
+                          type="text" 
+                          className="form-control" 
+                          placeholder="您的姓名"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          required
+                        />
                       </div>
                       <div className="col-12 col-lg-6">
-                        <input type="email" className="form-control" placeholder="邮箱地址" />
+                        <input 
+                          type="email" 
+                          className="form-control" 
+                          placeholder="邮箱地址"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          required
+                        />
                       </div>
                       <div className="col-12 col-lg-6">
-                        <input type="text" className="form-control" placeholder="联系电话" />
+                        <input 
+                          type="text" 
+                          className="form-control" 
+                          placeholder="联系电话"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          required
+                        />
                       </div>
                       <div className="col-12 col-lg-6">
-                        <select className="form-control">
-                          <option value="">选择咨询类型</option>
-                          <option value="">Xpend咨询</option>
-                          <option value="">产业并购</option>
-                          <option value="">攒局者服务</option>
-                          <option value="">入局者服务</option>
-                          <option value="">其他咨询</option>
+                        <select 
+                          className="form-control"
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleInputChange}
+                          required
+                        >
+                          <option value="">选择主题</option>
+                          <option value="业务咨询">业务咨询</option>
+                          <option value="合作洽谈">合作洽谈</option>
+                          <option value="服务咨询">服务咨询</option>
+                          <option value="投资咨询">投资咨询</option>
+                          <option value="其他主题">其他主题</option>
                         </select>
                       </div>
                       <div className="col-12">
-                        <textarea className="form-control" rows={20} cols={30}
-                                  placeholder="请输入您的留言"></textarea>
+                        <textarea 
+                          className="form-control" 
+                          rows={20} 
+                          cols={30}
+                          placeholder="请输入您的留言"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          required
+                        ></textarea>
                       </div>
                       <div className="col-12">
                         <div className="text-center">
-                          <button type="submit" className="btn btn-primary rounded-pill"><span>发送消息</span><span>发送消息</span></button>
+                          <button 
+                            type="submit" 
+                            className="btn btn-primary rounded-pill"
+                            disabled={isSubmitting}
+                          >
+                            <span>{isSubmitting ? '发送中...' : '发送消息'}</span>
+                            <span>{isSubmitting ? '发送中...' : '发送消息'}</span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -61,7 +184,6 @@ const ContactArea = () => {
 
         <div className="container">
           <div className="row g-4 justify-content-center">
-            {/* 第一行：联系信息 */}
             <div className="col-12 col-md-6 col-lg-6">
               <div className="contact-info-card">
                 <div className="icon-wrapper">
@@ -100,7 +222,6 @@ const ContactArea = () => {
             </div>
           </div>
 
-          {/* 第二行：办公地址 */}
           <div className="row g-4 justify-content-center mt-4">
             <div className="col-12 col-md-6 col-lg-6">
               <div className="contact-info-card">
