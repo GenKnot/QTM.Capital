@@ -61,7 +61,7 @@ const FooterOne = ({ style_2 }: any) => {
                   </p>
                   <p className="mb-2">
                     <span className="material-symbols-outlined me-2">phone</span>
-                    +1 (555) 123-4567
+                    +1 470-868-0868
                   </p>
                 </div>
 
