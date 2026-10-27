@@ -61,7 +61,7 @@ const FooterOne = ({ style_2 }: any) => {
                   </p>
                   <p className="mb-2">
                     <span className="material-symbols-outlined me-2">phone</span>
-                    +1 470-868-0868
+                    +1 (470) 868-0868
                   </p>
                 </div>
 
@@ -78,15 +78,8 @@ const FooterOne = ({ style_2 }: any) => {
         <div className="container">
           <div className="row align-items-center">
 
-            <div className="col-12 col-lg-6">
-              <p className="mb-0 copyright">Copyright © {new Date().getFullYear()} <span id="year"></span> <a href="#"> Xpend.Capital </a></p>
-            </div>
-
-            <div className="col-12 col-lg-6">
-              <div className="footer-bottom-nav">
-                <a href="#">条款和条件</a>
-                <a href="#">隐私政策</a>
-              </div>
+            <div className="col-12">
+              <p className="mb-0 copyright">Copyright © {new Date().getFullYear()} <a href="/"> Xpend.Capital </a></p>
             </div>
           </div>
         </div>

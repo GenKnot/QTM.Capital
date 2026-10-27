@@ -43,7 +43,7 @@ const OffCanvas = ({openCanvas, setOpenCavas} : any) => {
 
               <div>
                 <p>Phone number</p>
-                <h5 className="mb-0">+1 470-868-0868</h5>
+                <h5 className="mb-0">+1 (470) 868-0868</h5>
               </div>
             </div>
 
@@ -74,8 +74,24 @@ const OffCanvas = ({openCanvas, setOpenCavas} : any) => {
               </div>
 
               <div>
-                <p>Office Address</p>
-                <h5 className="mb-0">874P+RHX, Basseterre,<br />The Federation of Saint Kitts and Nevis</h5>
+                <p>Chicago Office</p>
+                <h5 className="mb-0">1201-141 W. Jackson Blvd.<br />Chicago, IL 60604, USA</h5>
+              </div>
+            </div>
+
+
+            <div>
+              <div className="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path
+                    d="M20.0026 0C12.1909 0 5.83594 6.355 5.83594 14.1667C5.83594 27.8633 18.9009 39.3167 19.4576 39.7967C19.6143 39.9317 19.8093 40 20.0026 40C20.1959 40 20.3909 39.9317 20.5476 39.7967C21.1043 39.315 34.1693 27.8617 34.1693 14.1667C34.1693 6.355 27.8143 0 20.0026 0ZM20.0026 21.6667C15.8609 21.6667 12.5026 18.3083 12.5026 14.1667C12.5026 10.025 15.8609 6.66667 20.0026 6.66667C24.1443 6.66667 27.5026 10.025 27.5026 14.1667C27.5026 18.3083 24.1443 21.6667 20.0026 21.6667Z"
+                    fill="#ECC80B" />
+                </svg>
+              </div>
+
+              <div>
+                <p>Saint Kitts and Nevis Office</p>
+                <h5 className="mb-0">874P+RHX, Basseterre,<br />Federation of Saint Kitts and Nevis</h5>
               </div>
             </div>
           </div>

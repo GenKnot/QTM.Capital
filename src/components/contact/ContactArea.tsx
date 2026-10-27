@@ -202,7 +202,7 @@ const ContactArea = () => {
                 </div>
 
                 <p className="mb-0">联系电话</p>
-                <h4>+1 470-868-0868</h4>
+                <h4>+1 (470) 868-0868</h4>
               </div>
             </div>
 
@@ -234,7 +234,7 @@ const ContactArea = () => {
                 </div>
 
                 <p className="mb-0">芝加哥办公地址</p>
-                <h4>2820#, 141 W Jackson Blvd<br />Chicago, IL 60604 USA</h4>
+                <h4>1201-141 W. Jackson Blvd.<br />Chicago, IL 60604, USA</h4>
               </div>
             </div>
 
@@ -249,7 +249,7 @@ const ContactArea = () => {
                 </div>
 
                 <p className="mb-0">圣基茨办公地址</p>
-                <h4>874P+RHX, Basseterre<br />The Federation of Saint Kitts and Nevis</h4>
+                <h4>874P+RHX, Basseterre<br />Federation of Saint Kitts and Nevis</h4>
               </div>
             </div>
           </div>
